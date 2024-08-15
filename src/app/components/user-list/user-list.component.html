@@ -1,0 +1,24 @@
+
+<app-loader />
+<div class="container">
+  @if (filterdUsers.length > 0) { @for (user of filterdUsers; track $index) {
+  <div class="our-team user-card" (click)="goToUserDetails(user.id)" highlightUser>
+    <div class="picture">
+      <img class="img-fluid"  [ngSrc]="user.avatar" fill [alt]="user.first_name" priority/>
+    </div>
+    <div class="team-content">
+      <h3 class="name">{{ user.first_name }} {{ user.last_name }}</h3>
+    </div>
+  </div>
+  } } @else if(!inProgress) {
+  <p class="no-data">No Users Found In This Page</p>
+  }
+</div>
+<p-paginator
+  [rows]="nRows"
+  [totalRecords]="totalUsers"
+  [pageLinkSize]="nPages"
+  (onPageChange)="onPageChange($event)"
+>
+</p-paginator>
+

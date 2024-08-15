@@ -1,0 +1,10 @@
+<header class="p-menubar-start">
+  <span>User Dashboard</span>
+  @if (inUsersPage) {
+    <input
+    type="number"
+    [formControl]="searchControl"
+    placeholder="Search by ID..."
+  />
+  }
+</header>

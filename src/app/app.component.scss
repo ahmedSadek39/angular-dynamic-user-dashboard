@@ -1,0 +1,24 @@
+::ng-deep {
+  .p-toast-message-content {
+    padding: 1rem;
+    min-width: 20rem;
+    direction: ltr !important;
+  }
+
+  .p-overlay {
+    z-index: 1055 !important;
+  }
+
+  .p-toast {
+    z-index: 2101 !important;
+  }
+
+  .p-toast-message-text {
+    margin-inline-start: 1rem;
+    width: fit-content !important;
+  }
+
+  .p-toast-top-right {
+    direction: ltr;
+  }
+}

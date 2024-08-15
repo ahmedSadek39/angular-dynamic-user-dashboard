@@ -1,0 +1,17 @@
+@if(userDetails.avatar){
+<div class="user-details-container">
+  <div class="user-avatar">
+    <img [ngSrc]="userDetails.avatar" fill [alt]="userDetails.first_name" priority />
+  </div>
+  <div class="user-info">
+    <h2>{{ userDetails.first_name }} {{ userDetails.last_name }}</h2>
+    <p>Email: {{ userDetails.email }}</p>
+  </div>
+  <button (click)="goBack()">Back to Users List</button>
+</div>
+} @else if(!inProgress) {
+  <div  class="user-details-container">
+    <p>No User Found With Id {{ userId }}</p>
+    <button (click)="goBack()">Back to Users List</button>
+  </div>
+}
